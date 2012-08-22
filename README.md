@@ -7,7 +7,7 @@ This sample demonstrates a rotating cube rendered with textures via OpenTK's GL 
 
 Screenshot
 -----------------------
-![Showcase](https://github.com/odessian/TexturedCube/raw/master/docs/screenshots/galaxy/device_marketing.png)
+![Showcase](https://raw.github.com/odessian/TexturedCube/master/docs/screenshots/framed_Screen1.png)
 
 John (john@odessian.com)
 
