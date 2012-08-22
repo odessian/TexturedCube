@@ -1,2 +1,0 @@
-Mono.Samples.TexturedCube.TexturedCubeActivity;mono.samples.texturedcube.TexturedCubeActivity
-Mono.Samples.TexturedCube.PaintingView;mono.samples.texturedcube.PaintingView
