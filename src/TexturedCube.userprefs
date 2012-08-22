@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TexturedCubeActivity.cs">
+    <Files>
+      <File FileName="TexturedCubeActivity.cs" Line="29" Column="4" />
+      <File FileName="PaintingView.cs" Line="14" Column="21" />
+      <File FileName="Resources/values/strings.xml" Line="7" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TexturedCube MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+</Properties>

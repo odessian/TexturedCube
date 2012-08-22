@@ -1,0 +1,1 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"><item android:id="@+id/menuSwitchTextures" android:title="@string/switch_texture" android:showAsAction="ifRoom|withText" /></menu>
