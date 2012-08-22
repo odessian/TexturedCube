@@ -16,11 +16,15 @@ namespace Mono.Samples.TexturedCube
 	ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.KeyboardHidden, LaunchMode = LaunchMode.SingleTask)]
 	public class TexturedCubeActivity : Activity
 	{
+		PaintingView _glp;
+		bool _systemUIVisible = false;
+
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
 
 			SetContentView (Resource.Layout.main);
+			_glp = FindViewById<PaintingView> (Resource.Id.paintingview);
 		}
 
 		public override bool OnCreateOptionsMenu (IMenu menu)
@@ -33,7 +37,22 @@ namespace Mono.Samples.TexturedCube
 		{
 			switch (item.ItemId) {
 				case Resource.Id.menuSwitchTextures:
-					FindViewById<PaintingView> (Resource.Id.paintingview).SwitchTexture();
+					_glp.SwitchTexture();
+					break;
+				case Resource.Id.menuToggleFullScreen:
+					if (_systemUIVisible)
+					{
+						Window.ClearFlags (WindowManagerFlags.Fullscreen);
+						_glp.SystemUiVisibility = StatusBarVisibility.Visible;
+						ActionBar.Show ();
+					}
+					else
+					{
+						Window.SetFlags (0, WindowManagerFlags.Fullscreen);
+						_glp.SystemUiVisibility = StatusBarVisibility.Hidden;
+						ActionBar.Hide ();
+					}
+					_systemUIVisible = !_systemUIVisible;
 					break;
 				default:
 					break;

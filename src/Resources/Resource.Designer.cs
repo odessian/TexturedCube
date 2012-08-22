@@ -76,6 +76,9 @@ namespace Mono.Samples.TexturedCube
 			// aapt resource value: 0x7f070003
 			public const int menuSwitchTextures = 2131165187;
 			
+			// aapt resource value: 0x7f070004
+			public const int menuToggleFullScreen = 2131165188;
+			
 			// aapt resource value: 0x7f070000
 			public const int paintingview = 2131165184;
 			
@@ -115,11 +118,14 @@ namespace Mono.Samples.TexturedCube
 			// aapt resource value: 0x7f040000
 			public const int app_name = 2130968576;
 			
-			// aapt resource value: 0x7f040003
-			public const int hide = 2130968579;
-			
 			// aapt resource value: 0x7f040002
-			public const int show = 2130968578;
+			public const int fullscreen = 2130968578;
+			
+			// aapt resource value: 0x7f040004
+			public const int hide = 2130968580;
+			
+			// aapt resource value: 0x7f040003
+			public const int show = 2130968579;
 			
 			// aapt resource value: 0x7f040001
 			public const int switch_texture = 2130968577;
