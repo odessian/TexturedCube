@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">LiveView Demo</string>
-    <string name="switch_texture">Switch</string>
-    <string name="fullscreen">Fullscreen</string>
-    <string name="show">Show</string>
-    <string name="hide">Hide</string>
+    <string name="app_name">Cube Demo</string>
+    <string name="switch_texture">Switch Texture</string>
 </resources>

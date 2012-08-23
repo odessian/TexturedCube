@@ -11,21 +11,5 @@
             android:id="@+id/paintingview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-        <LinearLayout
-            android:id="@+id/hidecontainer"
-            android:orientation="vertical"
-            android:visibility="gone"
-            android:background="@drawable/translucent"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <Button
-                android:id="@+id/switch_texture"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:visibility="gone"
-                android:text="@string/switch_texture" />
-        </LinearLayout>
     </FrameLayout>
 </LinearLayout>

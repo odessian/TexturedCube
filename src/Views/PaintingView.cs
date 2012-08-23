@@ -13,6 +13,9 @@ using Android.Graphics;
 using Android.Util;
 using Android.Views;
 
+using Android.Gestures;
+using Android.Runtime;
+
 namespace Mono.Samples.TexturedCube {
 
 	class PaintingView : AndroidGameView
@@ -23,7 +26,9 @@ namespace Mono.Samples.TexturedCube {
 		int [] textureIds;
 		int cur_texture;
 		int width, height;
-		Context context;
+		Context _context;
+
+		GestureDetector _gestureDetector;
 
 		public PaintingView (Context context, IAttributeSet attrs) :
 			base (context, attrs)
@@ -40,9 +45,10 @@ namespace Mono.Samples.TexturedCube {
 		private void Initialize ()
 		{
 			textureIds = new int[3];
-			context = Context;
+			_context = Context;
 			xangle = 45;
 			yangle = 45;
+			_gestureDetector = new GestureDetector(_context, new GestureListener(_context));
 
 			Resize += delegate {
 				height = Height;
@@ -132,9 +138,9 @@ namespace Mono.Samples.TexturedCube {
 			GL.Enable (All.Texture2D);
 			GL.GenTextures (3, textureIds);
 
-			LoadTexture (context, Resource.Drawable.steel, textureIds [0]);
-			LoadTexture (context, Resource.Drawable.stone, textureIds [1]);
-			LoadTexture (context, Resource.Drawable.water, textureIds [2]);
+			LoadTexture (_context, Resource.Drawable.steel, textureIds [0]);
+			LoadTexture (_context, Resource.Drawable.stone, textureIds [1]);
+			LoadTexture (_context, Resource.Drawable.water, textureIds [2]);
 
 			SetupCamera ();
 			RenderCube ();
@@ -177,6 +183,8 @@ namespace Mono.Samples.TexturedCube {
 		{
 			base.OnTouchEvent (e);
 
+			_gestureDetector.OnTouchEvent (e);
+
 			if (e.Action == MotionEventActions.Down) {
 			    prevx = e.GetX ();
 			    prevy = e.GetY ();
@@ -196,6 +204,7 @@ namespace Mono.Samples.TexturedCube {
 
 			if (e.Action == MotionEventActions.Down || e.Action == MotionEventActions.Move)
 				RenderCube ();
+
 			return true;
 		}
 
@@ -357,7 +366,18 @@ namespace Mono.Samples.TexturedCube {
 				1, 1
 			},
 		};
-	
+	}
 
+	class GestureListener : GestureDetector.SimpleOnGestureListener
+	{
+		Context _context;
+		public GestureListener (Context context)
+		{
+			_context = context;
+		}
+
+		public override bool OnDoubleTap(MotionEvent e) {
+			return ((TexturedCubeActivity)_context).OnDoubleTap(e);
+		}
 	}
 }

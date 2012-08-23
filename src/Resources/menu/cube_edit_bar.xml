@@ -2,7 +2,4 @@
 	<item android:id="@+id/menuSwitchTextures"
 		android:title="@string/switch_texture"
 		android:showAsAction="ifRoom|withText"/>
-	<item android:id="@+id/menuToggleFullScreen"
-		android:title="@string/fullscreen"
-		android:showAsAction="ifRoom|withText"/>
 </menu>
