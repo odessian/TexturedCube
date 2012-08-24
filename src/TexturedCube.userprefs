@@ -1,16 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Activities/TexturedCubeActivity.cs">
     <Files>
-      <File FileName="Activities/TexturedCubeActivity.cs" Line="34" Column="4" />
-      <File FileName="Views/PaintingView.cs" Line="12" Column="24" />
-      <File FileName="Resources/menu/cube_edit_bar.xml" Line="6" Column="30" />
-      <File FileName="Resources/values/strings.xml" Line="5" Column="24" />
+      <File FileName="Activities/TexturedCubeActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.TexturedCube MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
+  <MonoDevelop.Ide.ItemProperties.TexturedCube MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" AndroidDeviceId-Debug="3530601EEE7200EC" />
 </Properties>
